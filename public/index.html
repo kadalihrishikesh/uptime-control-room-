@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uptime Control Room — Service monitoring</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <div><p class="eyebrow">INFRASTRUCTURE DEMO</p><h1>Uptime Control Room</h1></div>
+        <p class="subtitle">A lightweight uptime monitor for the services that matter.</p>
+      </header>
+      <section class="add-card" aria-labelledby="add-title">
+        <div><p class="eyebrow">NEW MONITOR</p><h2 id="add-title">Watch a public URL</h2></div>
+        <form id="monitor-form">
+          <label>Friendly name<input id="name" maxlength="70" placeholder="Marketing website" /></label>
+          <label>URL<input id="url" type="url" required placeholder="https://example.com" /></label>
+          <button type="submit">Add monitor</button>
+        </form>
+        <p id="form-error" class="error" role="alert"></p>
+      </section>
+      <section class="overview">
+        <div><span id="total-count">0</span><small>monitors</small></div>
+        <div><span id="up-count">0</span><small>operational</small></div>
+        <div><span id="down-count">0</span><small>needs attention</small></div>
+      </section>
+      <section aria-labelledby="monitors-title">
+        <div class="section-heading"><div><p class="eyebrow">LIVE STATUS</p><h2 id="monitors-title">Your monitors</h2></div><button id="refresh-all" class="button-quiet">Refresh all</button></div>
+        <div id="monitor-list" class="monitor-list" aria-live="polite"></div>
+      </section>
+    </main>
+    <template id="monitor-template">
+      <article class="monitor-card">
+        <div class="status-dot"></div>
+        <div class="monitor-main"><h3></h3><a target="_blank" rel="noreferrer"></a><p class="check-detail"></p><div class="history" aria-label="Recent checks"></div></div>
+        <div class="actions"><button class="check">Check now</button><button class="delete">Remove</button></div>
+      </article>
+    </template>
+    <script src="/app.js"></script>
+  </body>
+</html>

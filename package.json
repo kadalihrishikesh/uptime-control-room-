@@ -1,0 +1,13 @@
+{
+  "name": "uptime-control-room",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A lightweight uptime monitor with optional S3 audit logging.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.970.0",
+    "dotenv": "^16.6.1"
+  }
+}
