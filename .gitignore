@@ -1,3 +1,10 @@
 node_modules/
 .env
 data/monitors.json
+
+# Terraform working files and any local variable values.
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example

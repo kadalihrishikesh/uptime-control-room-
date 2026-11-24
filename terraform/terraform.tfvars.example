@@ -1,0 +1,4 @@
+# Copy this file to terraform.tfvars. Do not commit terraform.tfvars.
+aws_region      = "eu-west-2"
+log_bucket_name = "replace-with-your-existing-s3-bucket-name"
+docker_image    = "your-dockerhub-username/uptime-control-room:latest"
