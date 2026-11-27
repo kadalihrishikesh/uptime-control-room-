@@ -1,6 +1,6 @@
 # Uptime Control Room
 
-A deliberately small uptime-monitoring web app that gives an infrastructure project a real service to deploy and operate.
+A small uptime-monitoring web app that gives an infrastructure project a real service to deploy and operate.
 
 ## Run locally
 
